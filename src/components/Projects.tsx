@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+how do import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 interface Project {
+  icon: string;
   id: string;
   name: string;
   pdfUrl: string;
@@ -14,6 +15,7 @@ const Projects: React.FC = () => {
   const navigate = useNavigate();
   const [projects, setProjects] = useState<Project[]>([]);
   const [isUploading, setIsUploading] = useState(false);
+  const [selectedIcon, setSelectedIcon] = useState('📄'); // Default icon
 
   useEffect(() => {
     loadProjects();
@@ -41,6 +43,7 @@ const Projects: React.FC = () => {
         const pdfUrl = event.target?.result as string;
         const newProject: Project = {
           id: Date.now().toString(),
+          icon: selectedIcon,
           name: file.name.replace('.pdf', ''),
           pdfUrl,
           cues: [],
@@ -69,6 +72,10 @@ const Projects: React.FC = () => {
     }
   };
 
+  const handleIconChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedIcon(e.target.value);
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 p-8">
       <div className="max-w-7xl mx-auto">
@@ -88,6 +95,16 @@ const Projects: React.FC = () => {
             >
               {isUploading ? 'Uploading...' : 'Upload PDF'}
             </label>
+            <select
+              value={selectedIcon}
+              onChange={handleIconChange}
+              className="mt-4 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+            >
+              <option>📄</option>
+              <option>🎬</option>
+              <option>🎵</option>
+              <option>💡</option>
+            </select>
           </div>
         </div>
 
@@ -109,6 +126,9 @@ const Projects: React.FC = () => {
                 className="bg-white overflow-hidden shadow rounded-lg hover:shadow-lg transition-shadow"
               >
                 <div className="p-6">
+                <div className="text-xl mb-2">
+                {project.icon}
+                </div>
                   <div className="flex items-center justify-between">
                     <h3 className="text-lg font-medium text-gray-900 truncate">
                       {project.name}
