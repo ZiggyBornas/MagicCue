@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/MagicCue/static/css/main.f52f82dd.css",
-    "main.js": "/MagicCue/static/js/main.8e15e815.js",
+    "main.css": "/MagicCue/static/css/main.c80f9d85.css",
+    "main.js": "/MagicCue/static/js/main.e0c5518f.js",
     "static/js/453.43307fe4.chunk.js": "/MagicCue/static/js/453.43307fe4.chunk.js",
     "index.html": "/MagicCue/index.html",
-    "main.f52f82dd.css.map": "/MagicCue/static/css/main.f52f82dd.css.map",
-    "main.8e15e815.js.map": "/MagicCue/static/js/main.8e15e815.js.map",
+    "main.c80f9d85.css.map": "/MagicCue/static/css/main.c80f9d85.css.map",
+    "main.e0c5518f.js.map": "/MagicCue/static/js/main.e0c5518f.js.map",
     "453.43307fe4.chunk.js.map": "/MagicCue/static/js/453.43307fe4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f52f82dd.css",
-    "static/js/main.8e15e815.js"
+    "static/css/main.c80f9d85.css",
+    "static/js/main.e0c5518f.js"
   ]
 }
