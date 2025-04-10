@@ -1,8 +1,8 @@
 {
   "name": "lighting-cue-organizer",
   "version": "0.1.0",
-  "private": true,
-  "homepage": "https://github.com/ZiggyBornas/magic-cue.git",
+  "private": false,
+  "homepage": "https://ZiggyBornas.github.io/MagicCue",
   "dependencies": {
     "@craco/craco": "^7.1.0",
     "@testing-library/jest-dom": "^5.17.0",
